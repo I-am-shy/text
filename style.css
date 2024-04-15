@@ -16,7 +16,7 @@ body{
 }
 #shadow span{
     --p:0%;
-    background: linear-gradient(to right,transparent var(--p),#454545 var(--p));
+    background: linear-gradient(to right,transparent var(--p),#454545 calc(var(--p) + 40px) );
     color:transparent;
     animation: run 5s  linear forwards;
 }
@@ -31,6 +31,9 @@ body{
 }
 
 @keyframes run{
+    20%{
+        --p : 0%;
+    }
     100%{
         --p : 100%;
     }
