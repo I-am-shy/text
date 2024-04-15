@@ -1,0 +1,37 @@
+body{
+    background-color: #454545;
+}
+.container{
+    width: 80%;
+    position: relative;
+    text-indent: 2em;
+    color: rgb(255, 255, 255);
+    line-height: 2;
+    font-size: 30px;
+    font-family: "行楷-简",Courier,monospace;
+}
+#shadow{
+    position: absolute;
+    top: -30px;
+}
+#shadow span{
+    --p:0%;
+    background: linear-gradient(to right,transparent var(--p),#454545 var(--p));
+    color:transparent;
+    animation: run 5s  linear forwards;
+}
+/* 自定义css属性 */
+@property --p{
+    /* 属性类型 ：百分比 */
+    syntax: "<percentage>";
+    /* 初始值：0% */
+    initial-value: 0%;
+    /* 不继承 */
+    inherits: false;
+}
+
+@keyframes run{
+    100%{
+        --p : 100%;
+    }
+}
