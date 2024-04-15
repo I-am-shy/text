@@ -14,8 +14,8 @@ setTimeout(()=>{
             console.log(data);        
             let img = document.createElement("img");
             img.src = data.imgurl;
-            img.width = data.width/2;
-            img.height = data.height/2;
+            img.width = Math.min(window.screen.width,data.width) ;
+            img.height = Math.min(window.screen.width,data.width)*(data.height/data.width);
             document.body.append(img);
         }
     }
